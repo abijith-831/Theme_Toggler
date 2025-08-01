@@ -1,0 +1,19 @@
+/* theme-light.css */
+/* body.theme-light {
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.8) 0%, rgba(150,206,180,0.2) 70%);
+    color: black;
+    font-family: 'sans-serif';
+}
+   */
+   /* styles/light-theme.css */
+body.theme-light {
+    background: linear-gradient(to right, #d60606, #ebedee);
+    color: #222;
+  }
+  
+  .navbar,
+  button {
+    background: linear-gradient(to right, #ffffff, #f2f2f2);
+    color: #000;
+  }
+  

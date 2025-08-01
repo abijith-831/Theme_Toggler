@@ -1,0 +1,12 @@
+/* styles/blue-theme.css */
+body.theme-blue {
+    background: linear-gradient(to right, #2193b0, #6dd5ed);
+    color: #ffffff;
+  }
+  
+  .navbar,
+  button {
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    color: #fff;
+  }
+  

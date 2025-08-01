@@ -1,15 +1,9 @@
 @import "tailwindcss";
 
-/* Tailwind custom theme classes */
-.theme-light {
-    @apply bg-white text-black font-sans;
-  }
-  
-  .theme-dark {
-    @apply bg-gray-900 text-white font-mono;
-  }
-  
-  .theme-blue {
-    @apply bg-blue-100 text-blue-900 font-serif;
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+  .theme-light, .theme-dark, .theme-blue {
+    transition: background 1s ease, color 1s ease;
   }
   
