@@ -1,4 +1,7 @@
 import { useEffect, useState } from "react";
+import { VideoText } from "../Components/video-text";
+import BlurInText from "../Components/BlurInText";
+import ContentCard from "../Components/ContentCard";
 
 interface Product {
   id: number;
@@ -26,25 +29,28 @@ const LandingPage = () => {
   }, []);
 
   return (
-    <div className="p-6 space-y-6">
-      <h1 className="text-4xl font-bold">Welcome to the Themed App</h1>
-      <p>This is a sample paragraph showing the currently selected theme.</p>
-      <button className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Click Me</button>
+    <div className="h-full">
+      {/* Hero Section */}
+      <div className="relative h-[400px] w-full overflow-hidden">
+        <VideoText src="https://cdn.pixabay.com/video/2024/05/25/213616_large.mp4">
+          Change Theme
+        </VideoText>
+      </div>
 
-      {loading ? (
-        <p>Loading products...</p>
-      ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {products.map((product) => (
-            <div key={product.id} className="p-4 border rounded shadow bg-white dark:bg-gray-800">
-              <img src={product.image} alt={product.title} className="h-40 object-contain w-full mb-4" />
-              <h2 className="font-semibold text-lg">{product.title}</h2>
-              <p className="text-sm mb-2">{product.description.slice(0, 100)}...</p>
-              <p className="font-bold text-blue-600 dark:text-blue-400">${product.price}</p>
-            </div>
-          ))}
-        </div>
-      )}
+
+      <div className="text-center mt-6 px-4 w-[50%] mx-auto">
+        <h2 className="text-4xl font-semibold   ">
+          Choose a theme to experience a variety of visual styles!
+        </h2>
+        <p className="mt-2 text-gray-600 dark:text-gray-400">
+          Each theme offers a unique design and mood — personalize your journey through the UI.
+        </p>
+      </div><br /><br />
+
+      <div className="text-center ">
+        <BlurInText text="Scroll for more"/>
+      </div>
+      <ContentCard/>
     </div>
   );
 };

@@ -4,10 +4,10 @@ import Navbar from './Components/Navbar';
 import LandingPage from './Pages/LandingPage';
 import AboutPage from './Pages/AboutPage';
 import ContactPage from './Pages/ContactPage';
-import { useTheme } from './ThemeContext'; // <-- import context
+import { useTheme } from './ThemeContext'; 
 
 function App() {
-  const { theme } = useTheme(); // use context directly
+  const { theme } = useTheme(); 
 
   useEffect(() => {
     const existingLink = document.getElementById('theme-css') as HTMLLinkElement;
@@ -25,7 +25,7 @@ function App() {
   return (
     <Router>
       <Navbar />
-      <div style={{ padding: '20px' }}>
+      <div >
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/about" element={<AboutPage />} />
