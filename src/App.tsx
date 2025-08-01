@@ -1,10 +1,23 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './Components/Navbar';
+import LandingPage from './Pages/LandingPage'
+import AboutPage from './Pages/AboutPage'
+import ContactPage from './Pages/ContactPage'
 
-const App = () => {
+
+function App() {
   return (
-    <div>
-      <h1 className='bg-red-400 text-8xl'>sjfs</h1>
-    </div>
-  )
+    <Router>
+      <Navbar />
+      <div style={{ padding: '20px' }}>
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+        </Routes>
+      </div>
+    </Router>
+  );
 }
 
-export default App
+export default App;
