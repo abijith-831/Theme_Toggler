@@ -9,7 +9,7 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="navbar flex items-center justify-between mx-48   my-4 rounded-full  px-24 py-8  shadow-2xl"  >
+    <nav className="navbar flex items-center justify-between mx-60   mt-6 rounded-full  px-20 py-4  shadow-2xl"  >
       <div className="text-xl font-bold ">
       <Link to="/">
         <img src="/logo/logo.svg" alt="MyLogo" className="h-10 w-auto" />

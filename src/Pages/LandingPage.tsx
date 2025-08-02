@@ -1,37 +1,14 @@
-import { useEffect, useState } from "react";
+
 import { VideoText } from "../Components/video-text";
 import BlurInText from "../Components/BlurInText";
 import ContentCard from "../Components/ContentCard";
 
-interface Product {
-  id: number;
-  title: string;
-  price: number;
-  image: string;
-  description: string;
-}
 
 const LandingPage = () => {
-  const [products, setProducts] = useState<Product[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    fetch("https://fakestoreapi.com/products")
-      .then((res) => res.json())
-      .then((data) => {
-        setProducts(data);
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.error("Error fetching products:", error);
-        setLoading(false);
-      });
-  }, []);
-
   return (
     <div className="h-full">
       {/* Hero Section */}
-      <div className="relative h-[400px] w-full overflow-hidden">
+      <div className="relative h-[350px] w-full overflow-hidden">
         <VideoText src="https://cdn.pixabay.com/video/2024/05/25/213616_large.mp4">
           Change Theme
         </VideoText>
