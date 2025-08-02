@@ -6,7 +6,7 @@ body.theme-dark {
   
   .navbar,
   button {
-    background: linear-gradient(to right, #333, #444);
+    background: linear-gradient(to right, #be1bb6, #444);
     color: #fff;
   }
   

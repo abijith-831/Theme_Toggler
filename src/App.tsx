@@ -20,6 +20,9 @@ function App() {
       link.href = `/styles/${theme}-theme.css`;
       document.head.appendChild(link);
     }
+
+    document.body.classList.remove('light-theme', 'dark-theme', 'blue-theme');
+    document.body.classList.add(`${theme}-theme`);
   }, [theme]); 
 
   return (

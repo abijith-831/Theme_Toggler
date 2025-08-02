@@ -48,7 +48,7 @@ const LandingPage = () => {
       </div><br /><br />
 
       <div className="text-center ">
-        <BlurInText text="Scroll for more"/>
+        <BlurInText text="Featured Products"/>
       </div>
       <ContentCard/>
     </div>

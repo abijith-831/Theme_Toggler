@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const BlurInText = ({ text = "Blur In Effect" }: { text?: string }) => {
     return (
-        <h2 className="text-2xl md:text-4xl font-bold text-center">
+        <h2 className="text-4xl md:text-6xl font-bold text-center">
             {text.split('').map((char, i) => (
                 <motion.span
                     key={i}

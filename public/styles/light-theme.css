@@ -7,13 +7,24 @@
    */
    /* styles/light-theme.css */
 body.theme-light {
-    background: linear-gradient(to right, #feffff, #ebedee);
-    color: #222;
-  }
-  
-  .navbar,
-  button {
-    background: linear-gradient(to right, #ffffff, #f2f2f2);
-    color: #000;
-  }
-  
+  background: linear-gradient(to right, #f0f0f0, #ffffff);
+  color: #222;
+}
+
+.navbar,
+nav{
+  background-color: black;
+  color: white;
+}
+button {
+  background-color: black;
+  /* background: linear-gradient(to right, #ffffff, #f2f2f2); */
+}
+body.theme-light .dropdown {
+  background-color: white;
+  color: black;
+}
+
+body.theme-light .dropdown option {
+  color: black;
+}
