@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import '../../../public/styles/ViewToggle.css'
+import '../../styles/ViewToggle.css'
 import ListView from './ListView'
 import CardView from './CardView'
 import TableView from './TableView'
