@@ -27,7 +27,7 @@ function App() {
   }, [theme]);
 
   return (
-    <div className="relative min-h-screen w-full overflow-hidden">
+    <div className="relative min-h-screen w-full ">
       {/* ==========Background Gradiend ================== */}
       <div
         className="absolute inset-0 -z-10 h-full w-full"
@@ -44,7 +44,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<LandingPage />} />
-          {/* ============dummy about and contact page=========== */}
+          {/* ============dummy about and contact page========== */}
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
