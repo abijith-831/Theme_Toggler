@@ -18,7 +18,7 @@ interface Product {
     return (
       <div className="flex flex-col gap-6 mt-12">
         {products.map((product) => (
-          <div key={product.id} className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 p-6 rounded-xl shadow-md bg-[var(--bg-card)] hover:transition-transform hover:scale-102 duration-300">
+          <div key={product.id} className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 p-6 rounded-xl shadow-md bg-[var(--bg-card)] hover:transition-transform hover:scale-101 duration-300">
             {/* ===========Left side ========= */}
             <div className="flex flex-col sm:flex-row rounded-xl gap-6 w-full">
               <img  src={product.image}  alt={product.title}  className="w-full rounded-md sm:w-32 sm:h-32 object-contain"/>

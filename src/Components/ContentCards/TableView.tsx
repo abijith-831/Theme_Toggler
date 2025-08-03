@@ -45,7 +45,7 @@ const TableView:React.FC<TableViewProps> = ({products}) => {
   return (
     <div className="bg-white mt-12 rounded-xl shadow-2xl overflow-hidden border border-gray-200">
     <div className="w-full overflow-x-auto">
-      <table className="min-w-[700px] w-full table-auto">
+      <table className="min-w-[800px] w-full table-auto">
         <thead>
           <tr className="bg-gray-900 cursor-pointer  text-white">
             <th className="p-4 text-left font-semibold tracking-wide whitespace-nowrap">Product</th>
@@ -57,7 +57,7 @@ const TableView:React.FC<TableViewProps> = ({products}) => {
         </thead>
         <tbody className="divide-y divide-gray-200">
           {products.map((product, index) => (
-            <tr key={product.id} className={`transition-all duration-300 hover:transition-transform hover:scale-101 hover:bg-gray-100 duration-300 hover:shadow-md ${   index % 2 === 0 ? 'bg-gray-200' : 'bg-gray-300' }`}>
+            <tr key={product.id} className={`transition-all  hover:transition-transform hover:scale-101 hover:bg-gray-100 duration-300 hover:shadow-md ${   index % 2 === 0 ? 'bg-gray-200' : 'bg-gray-300' }`}>
               <td className="p-4 whitespace-nowrap">
                 <div className="flex items-center space-x-4">
                   <div className="relative group">
