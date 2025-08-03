@@ -1,4 +1,4 @@
-import { Star, Eye, ShoppingCart } from 'lucide-react';
+import { Star , ShoppingCart } from 'lucide-react';
 
 interface Product {
     id: number;
@@ -44,42 +44,31 @@ const renderStars = (rating:any) => {
 const TableView:React.FC<TableViewProps> = ({products}) => {
   return (
     <div className="bg-white rounded-xl shadow-2xl overflow-hidden border border-gray-200">
-    <div className="overflow-x-auto">
-      <table className="w-full">
+    <div className="w-full overflow-x-auto">
+      <table className="min-w-[700px] w-full table-auto">
         <thead>
-          <tr className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
-            <th className="p-4 text-left font-semibold tracking-wide">Product</th>
-            <th className="p-4 text-left font-semibold tracking-wide">Details</th>
-            <th className="p-4 text-left font-semibold tracking-wide">Price</th>
-            <th className="p-4 text-left font-semibold tracking-wide">Rating</th>
-            <th className="p-4 text-left font-semibold tracking-wide">Actions</th>
+          <tr className="bg-gray-900 cursor-pointer  text-white">
+            <th className="p-4 text-left font-semibold tracking-wide whitespace-nowrap">Product</th>
+            <th className="p-4 text-left font-semibold tracking-wide whitespace-nowrap">Details</th>
+            <th className="p-4 text-left font-semibold tracking-wide whitespace-nowrap">Price</th>
+            <th className="p-4 text-left font-semibold tracking-wide whitespace-nowrap">Rating</th>
+            <th className="p-4 text-left font-semibold tracking-wide whitespace-nowrap">Actions</th>
           </tr>
         </thead>
-        <tbody className="divide-y divide-gray-100">
+        <tbody className="divide-y divide-gray-200">
           {products.map((product, index) => (
-            <tr 
-              key={product.id} 
-              className={`transition-all duration-300 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50 hover:shadow-md ${
-                index % 2 === 0 ? 'bg-white' : 'bg-gray-50/50'
-              }`}
-            >
-              <td className="p-4">
+            <tr key={product.id} className={`transition-all duration-300 hover:bg-gradient-to-r hover:gray-600 hover:shadow-md ${   index % 2 === 0 ? 'bg-gray-200' : 'bg-gray-300' }`}>
+              <td className="p-4 whitespace-nowrap">
                 <div className="flex items-center space-x-4">
                   <div className="relative group">
-                    <img 
-                      src={product.image} 
-                      className="w-20 h-20 object-cover rounded-lg shadow-md transition-transform duration-300 group-hover:scale-110" 
-                      alt={product.title} 
-                    />
-                    <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 rounded-lg transition-all duration-300 flex items-center justify-center">
-                      <Eye className="w-6 h-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    </div>
+                    <img src={product.image} className="w-20 h-20 object-cover rounded-lg shadow-md transition-transform duration-300 group-hover:scale-110" alt={product.title}/>
+                    
                   </div>
                 </div>
               </td>
-              <td className="p-4">
+              <td className="p-4 max-w-xs">
                 <div className="space-y-2">
-                  <h3 className="font-semibold text-gray-800 text-lg hover:text-indigo-600 transition-colors duration-200">
+                  <h3 className="font-semibold cursor-pointer text-gray-800 text-base md:text-lg hover:text-indigo-600 transition-colors duration-200">
                     {product.title}
                   </h3>
                   <p className="text-gray-600 text-sm leading-relaxed">
@@ -87,12 +76,12 @@ const TableView:React.FC<TableViewProps> = ({products}) => {
                   </p>
                 </div>
               </td>
-              <td className="p-4">
-                <div className="text-2xl font-bold text-green-600">
+              <td className="p-4 whitespace-nowrap">
+                <div className="text-lg text-black cursor-pointer md:text-2xl font-bold ">
                   ${product.price}
                 </div>
               </td>
-              <td className="p-4">
+              <td className="p-4 whitespace-nowrap">
                 <div className="space-y-1">
                   {renderStars(product.rating.rate)}
                   <div className="text-xs text-gray-500">
@@ -100,13 +89,11 @@ const TableView:React.FC<TableViewProps> = ({products}) => {
                   </div>
                 </div>
               </td>
-              <td className="p-4">
-                <div className="flex space-x-2">
-                  <button className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-4 py-2 rounded-lg hover:from-indigo-600 hover:to-purple-700 transition-all duration-300 flex items-center space-x-2 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
-                    <ShoppingCart className="w-4 h-4" />
-                    <span className="text-sm font-medium">Add to Cart</span>
-                  </button>
-                </div>
+              <td className="p-4 whitespace-nowrap">
+                <button className="bg-gradient-to-r from-gray-700 to-gray-900 text-white px-4 py-2 rounded-lg hover:from-gray-900 hover:to-gray-500 transition-all duration-300 flex items-center space-x-2 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 text-sm">
+                  <ShoppingCart className="w-4 h-4" />
+                  <span>Add to Cart</span>
+                </button>
               </td>
             </tr>
           ))}
@@ -114,6 +101,7 @@ const TableView:React.FC<TableViewProps> = ({products}) => {
       </table>
     </div>
   </div>
+  
   )
 }
 

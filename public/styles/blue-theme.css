@@ -8,10 +8,7 @@
 
 
 body.theme-blue {
-    /* background: linear-gradient(to right, #2193b0, #6dd5ed); */
-    /* background-image: radial-gradient(circle 500px at 50% 100px, rgba(139,92,246,0.4), transparent);
-    color: #ffffff; */
-    position: absolute;
+  position: absolute;
   inset: 0;
   z-index: 0;
 
@@ -27,7 +24,7 @@ body.theme-blue {
   .navbar,
   button {
     background: linear-gradient(to right, #1e3c72, #2a5298);
-    color: #fff;
+    
   }
   
   body.theme-blue {
@@ -37,12 +34,12 @@ body.theme-blue {
   @import "tailwindcss";
 
 .theme-blue {
-  --bg-card: #e0f2fe; /* Tailwind bg-blue-100 */
-  --text-primary: #1e3a8a; /* Tailwind text-blue-900 */
-  --text-secondary: #3b82f6; /* Tailwind text-blue-500 */
-  --button-bg: #bae6fd; /* Tailwind bg-blue-200 */
-  --button-active: #1d4ed8; /* Tailwind bg-blue-700 */
-  --button-text: #ffffff;
+  --bg-card: #e0f2fe; 
+  --text-primary: #1e3a8a; 
+  --text-secondary: #3b82f6;
+  --button-bg: #bae6fd; 
+  --button-active: #1d4ed8;
+  --button-text: #992929;
 }
 
 
@@ -59,4 +56,5 @@ body.theme-blue .view-toggle-button.active {
   background-color: #7294f1;
   color: white;
   font-weight: bold;
+  transform: scale(1.1);
 }

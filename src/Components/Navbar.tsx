@@ -9,9 +9,9 @@ const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const options = [
-    { label: "Light", value: "light", icon: <Sun size={16} className="mr-2" /> },
+    { label: "Light", value: "light", icon: <Sun size={16} className="mr-2 " /> },
     { label: "Dark", value: "dark", icon: <Moon size={16} className="mr-2" /> },
-    { label: "Blue", value: "blue", icon: <Palette size={16} className="mr-2" /> }
+    { label: "Blue", value: "blue", icon: <Palette size={16} className="mr-2 " /> }
   ];
 
   const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
@@ -30,7 +30,7 @@ const Navbar: React.FC = () => {
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center space-x-6 font-bold">
-          <Link to="/" className="px-6 py-2 rounded-full transition hover:bg-black hover:text-white">Home</Link>
+          <Link to="/" className="px-6 py-2  rounded-full transition hover:bg-black hover:text-white">Home</Link>
           <Link to="/about" className="px-6 py-2 rounded-full transition hover:bg-black hover:text-white">About</Link>
           <Link to="/contact" className="px-6 py-2 rounded-full transition hover:bg-black hover:text-white">Contact</Link>
 

@@ -3,6 +3,7 @@ import '../../../public/styles/ViewToggle.css'
 import ListView from './ListView'
 import CardView from './CardView'
 import TableView from './TableView'
+import { useTheme } from '../../ThemeContext'
 
 interface Product {
   id: number;
@@ -22,8 +23,17 @@ const ContentCard = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const productsPerPage = 6;
   const [viewType, setViewType] = useState<'card' | 'list' | 'table'>('card');
+  const { theme } = useTheme();
 
-
+  useEffect(() => {
+    if (theme === 'dark') {
+      setViewType('list');
+    } else if (theme === 'blue') {
+      setViewType('table');
+    } else {
+      setViewType('card');
+    }
+  }, [theme]);
 
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
@@ -59,7 +69,7 @@ const ContentCard = () => {
   };
 
   return (
-    <div className='px-24 py-14 justify-center items-center'>
+    <div className='px-2 md:px-8 lg:px-16 py-14 justify-center items-center'>
       <div className="view-toggle-wrapper">
         <div className="view-toggle-container">
           <button  className={`view-toggle-button ${viewType === 'card' ? 'active' : ''}`}  onClick={() => setViewType('card')}>  Card View</button>
@@ -82,13 +92,13 @@ const ContentCard = () => {
         {viewType === 'table' && <TableView products={currentProducts} />}
 
           <div className="flex justify-center mt-6 space-x-2">
-            <button onClick={goToPreviousPage} disabled={currentPage === 1} className="px-6  py-2 bg-gray-200 rounded-full disabled:opacity-50 hover:transition-transform hover:scale-105 duration-300" >   Prev </button>
+            <button onClick={goToPreviousPage} disabled={currentPage === 1} className="px-6  py-2 bg-gray-200 text-black rounded-full disabled:opacity-50 hover:transition-transform hover:scale-105 duration-300" >   Prev </button>
 
             {Array.from({ length: totalPages }, (_, i) => (
-              <button key={i + 1}   onClick={() => handlePageClick(i + 1)}   className={`px-4 py-2 rounded-full ${currentPage === i + 1 ? 'bg-blue-800 font-bold scale-120 text-white' : 'bg-gray-100 hover:transition-transform hover:scale-110 duration-300'}`} >  {i + 1}</button>
+              <button key={i + 1}   onClick={() => handlePageClick(i + 1)}   className={`px-4 py-2 rounded-full ${currentPage === i + 1 ? 'bg-gray-600 font-bold hover:transition-transform scale-120 hover:scale-125 text-black border border-white' : 'bg-gray-100 font-bold  text-black hover:transition-transform hover:scale-110 duration-300'}`} >  {i + 1}</button>
             ))}
 
-            <button onClick={goToNextPage} disabled={currentPage === totalPages} className="px-6 py-2 bg-gray-200 rounded-full disabled:opacity-50 hover:transition-transform hover:scale-105 duration-300" >   Next </button>
+            <button onClick={goToNextPage} disabled={currentPage === totalPages} className="px-6 py-2 bg-gray-200 text-black font-bold rounded-full disabled:opacity-50 hover:transition-transform hover:scale-105 duration-300" >   Next </button>
           </div>
         </>
       )}
