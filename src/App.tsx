@@ -9,6 +9,7 @@ import { useTheme } from './ThemeContext';
 function App() {
   const { theme } = useTheme(); 
 
+  //============ accessing the css file matching to theme selected from navbar-theme-dropdown  ===========
   useEffect(() => {
     const existingLink = document.getElementById('theme-css') as HTMLLinkElement;
     if (existingLink) {
@@ -27,7 +28,7 @@ function App() {
 
   return (
     <div className="relative min-h-screen w-full overflow-hidden">
-      {/* Background Gradient */}
+      {/* ==========Background Gradiend ================== */}
       <div
         className="absolute inset-0 -z-10 h-full w-full"
         style={{
@@ -43,6 +44,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<LandingPage />} />
+          {/* ============dummy about and contact page=========== */}
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>

@@ -1,3 +1,5 @@
+import { ShoppingCart } from "lucide-react";
+
 interface Product {
     id: number;
     title: string;
@@ -16,7 +18,7 @@ interface Product {
   
   const ListView: React.FC<ListViewProps> = ({ products }) => {
     return (
-      <div className="flex flex-col gap-6 mt-12">
+      <div className="flex flex-col gap-6 px-6 mt-12">
         {products.map((product) => (
           <div key={product.id} className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 p-6 rounded-xl shadow-md bg-[var(--bg-card)] hover:transition-transform hover:scale-101 duration-300">
             {/* ===========Left side ========= */}
@@ -28,6 +30,10 @@ interface Product {
                   {product.description.slice(0, 150)}...
                 </p>
                 <p className="text-lg font-bold mt-2">${product.price}</p>
+                <button className="bg-gradient-to-r mt-3 mx-2 from-gray-700 to-gray-900 text-white px-4 py-2 rounded-lg hover:from-gray-900 hover:to-gray-500 transition-all duration-300 flex items-center space-x-2 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 text-sm">
+                  <ShoppingCart className="w-4 h-4" />
+                  <span>Add to Cart</span>
+                </button>
               </div>
             </div>
   
@@ -37,7 +43,16 @@ interface Product {
                 ⭐{product.rating.rate}
               </span>
               <span className="text-sm font-bold text-gray-500 mt-2 md:mt-6">
-                {product.rating.count} sold
+                <div className="flex">
+                    <span >
+
+                {product.rating.count} 
+                    </span>
+                    <span className="px-2">
+
+                reviews
+                    </span>
+                </div>
               </span>
             </div>
           </div>
