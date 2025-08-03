@@ -42,7 +42,7 @@ interface Product {
               <span className="text-sm font-medium bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full">
                 ⭐{product.rating.rate}
               </span>
-              <span className="text-sm font-bold text-gray-500 mt-2 md:mt-6">
+              <span className="text-sm font-bold text-black mt-2 md:mt-6">
                 <div className="flex">
                     <span >
 

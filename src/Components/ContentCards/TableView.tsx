@@ -57,7 +57,7 @@ const TableView:React.FC<TableViewProps> = ({products}) => {
         </thead>
         <tbody className="divide-y divide-gray-200">
           {products.map((product, index) => (
-            <tr key={product.id} className={`transition-all  hover:transition-transform hover:scale-101 hover:bg-gray-100 duration-300 hover:shadow-md ${   index % 2 === 0 ? 'bg-gray-200' : 'bg-gray-300' }`}>
+            <tr key={product.id} className={`transition-all   hover:bg-gray-100 duration-300 hover:shadow-md ${   index % 2 === 0 ? 'bg-gray-200' : 'bg-gray-300' }`}>
               <td className="p-4 whitespace-nowrap">
                 <div className="flex items-center space-x-4">
                   <div className="relative group">
