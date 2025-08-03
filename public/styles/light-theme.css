@@ -9,7 +9,7 @@
 .theme-light,
 .theme-dark,
 .theme-blue {
-  transition: background 2s ease 1s, color 2s ease 1s;
+  transition: background 2s ease 0.5s, color 2s ease 0.5s;
 }
 body.theme-light {
  background: #F4F1ED;

@@ -16,7 +16,7 @@ interface Product {
   
   const ListView: React.FC<ListViewProps> = ({ products }) => {
     return (
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-6 mt-12">
         {products.map((product) => (
           <div key={product.id} className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 p-6 rounded-xl shadow-md bg-[var(--bg-card)]">
             {/* Left side: image and details */}

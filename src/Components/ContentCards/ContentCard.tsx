@@ -70,11 +70,11 @@ const ContentCard = () => {
 
   return (
     <div className='px-2 md:px-8 lg:px-16 py-14 justify-center items-center'>
-      <div className="view-toggle-wrapper">
+      <div className="view-toggle-wrapper mt-2 ">
         <div className="view-toggle-container">
-          <button  className={`view-toggle-button ${viewType === 'card' ? 'active' : ''}`}  onClick={() => setViewType('card')}>  Card View</button>
-          <button  className={`view-toggle-button ${viewType === 'list' ? 'active' : ''}`}  onClick={() => setViewType('list')}>  List View</button>
-          <button  className={`view-toggle-button ${viewType === 'table' ? 'active' : ''}`}  onClick={() => setViewType('table')}>  Table View</button>
+          <button  className={`view-toggle-button font-bold ${viewType === 'card' ? 'active' : ''}`}  onClick={() => setViewType('card')}>  Card View</button>
+          <button  className={`view-toggle-button font-bold ${viewType === 'list' ? 'active' : ''}`}  onClick={() => setViewType('list')}>  List View</button>
+          <button  className={`view-toggle-button font-bold ${viewType === 'table' ? 'active' : ''}`}  onClick={() => setViewType('table')}>  Table View</button>
         </div>
       </div>
 

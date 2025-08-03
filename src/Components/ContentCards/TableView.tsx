@@ -43,7 +43,7 @@ const renderStars = (rating:any) => {
 
 const TableView:React.FC<TableViewProps> = ({products}) => {
   return (
-    <div className="bg-white rounded-xl shadow-2xl overflow-hidden border border-gray-200">
+    <div className="bg-white mt-12 rounded-xl shadow-2xl overflow-hidden border border-gray-200">
     <div className="w-full overflow-x-auto">
       <table className="min-w-[700px] w-full table-auto">
         <thead>

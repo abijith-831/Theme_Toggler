@@ -4,7 +4,7 @@
 .theme-light,
 .theme-dark,
 .theme-blue {
-  transition: background 2s ease 1s, color 2s ease 1s;
+  transition: background 2s ease 0.5s, color 2s ease 0.5s;
 }
 
 
@@ -28,7 +28,7 @@ body.theme-dark {
   @import "tailwindcss";
 
 .theme-dark {
-  --bg-card: #1f2937; 
+  --bg-card: #5f6368; 
   --text-primary: #f9fafb;
   --text-secondary: #9ca3af; 
   --button-bg: #374151; 

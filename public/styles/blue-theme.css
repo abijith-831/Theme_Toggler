@@ -2,7 +2,7 @@
 .theme-light,
 .theme-dark,
 .theme-blue {
-  transition: background 2s ease 1s, color 2s ease 1s;
+  transition: background 2s ease 0.5s, color 2s ease 0.5s;
 }
 
 
@@ -34,9 +34,9 @@ body.theme-blue {
   @import "tailwindcss";
 
 .theme-blue {
-  --bg-card: #e0f2fe; 
-  --text-primary: #1e3a8a; 
-  --text-secondary: #3b82f6;
+  --bg-card: #959ca1; 
+  --text-primary: #fdfdfd; 
+  --text-secondary: #050505;
   --button-bg: #bae6fd; 
   --button-active: #1d4ed8;
   --button-text: #992929;
@@ -50,11 +50,13 @@ body.theme-blue .view-toggle-container {
 
 body.theme-blue .view-toggle-button {
   color: #e6e8ec;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  animation-duration: 1s;
 }
 
 body.theme-blue .view-toggle-button.active {
   background-color: #7294f1;
   color: white;
   font-weight: bold;
-  transform: scale(1.1);
+  transform: scale(1.3);
 }
