@@ -1,0 +1,76 @@
+/* Base wrapper for toggle area */
+.view-toggle-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Capsule shape container */
+  .view-toggle-container {
+    display: flex;
+    background-color: #f3f4f6; /* Light gray */
+    border-radius: 9999px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Button base style */
+  .view-toggle-button {
+    padding: 0.5rem 1.5rem;
+    border: none;
+    background-color: transparent;
+    color: #333;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  /* Active button style (used dynamically) */
+  .view-toggle-button.active {
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  /* ========== THEMES ========== */
+  
+  /* LIGHT THEME (default) */
+  body.theme-light .view-toggle-container {
+    background-color: #f3f4f6;
+  }
+  
+  body.theme-light .view-toggle-button.active {
+    background-color: #000;
+    color: #fff;
+  }
+  
+  /* DARK THEME */
+  body.theme-dark .view-toggle-container {
+    background-color: #333;
+  }
+  
+  body.theme-dark .view-toggle-button {
+    color: #ddd;
+  }
+  
+  body.theme-dark .view-toggle-button.active {
+    background-color: #fff;
+    color: #000;
+    font-weight: bold;
+  }
+  
+  /* BLUE THEME */
+  body.theme-blue .view-toggle-container {
+    background-color: #e0f0ff;
+  }
+  
+  body.theme-blue .view-toggle-button {
+    color: #1e3a8a;
+  }
+  
+  body.theme-blue .view-toggle-button.active {
+    background-color: #1e3a8a;
+    color: white;
+    font-weight: bold;
+  }
+  

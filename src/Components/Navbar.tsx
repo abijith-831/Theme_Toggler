@@ -20,7 +20,8 @@ const Navbar: React.FC = () => {
 
   
   return (
-    <nav className="w-full  px-4 md:px-10 py-6 shadow-xl bg-white dark:bg-gray-800">
+<nav className="w-full px-4 md:px-10 py-6 shadow-xl bg-white/30 dark:bg-gray-800/30 backdrop-blur-md border border-white/20 ">
+
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         {/* Logo */}
         <Link to="/" className="flex items-center">

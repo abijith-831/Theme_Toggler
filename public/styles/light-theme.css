@@ -44,3 +44,13 @@ body.theme-light .dropdown option {
   --button-active: #3b82f6; /* Tailwind bg-blue-500 */
   --button-text: #ffffff;
 }
+
+
+body.theme-light .view-toggle-container {
+  background-color: #f3f4f6;
+}
+
+body.theme-light .view-toggle-button.active {
+  background-color: #000;
+  color: #fff;
+}

@@ -33,7 +33,7 @@ body.theme-blue {
   body.theme-blue {
     font-family: 'Pacifico';
   }
-  
+
   @import "tailwindcss";
 
 .theme-blue {
@@ -43,4 +43,20 @@ body.theme-blue {
   --button-bg: #bae6fd; /* Tailwind bg-blue-200 */
   --button-active: #1d4ed8; /* Tailwind bg-blue-700 */
   --button-text: #ffffff;
+}
+
+
+body.theme-blue .view-toggle-container {
+  background-color: #e0f0ff;
+  font-size: 20px;
+}
+
+body.theme-blue .view-toggle-button {
+  color: #e6e8ec;
+}
+
+body.theme-blue .view-toggle-button.active {
+  background-color: #7294f1;
+  color: white;
+  font-weight: bold;
 }
