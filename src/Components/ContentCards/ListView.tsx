@@ -38,8 +38,8 @@ interface Product {
             </div>
   
             {/* ==============Right side============= */}
-            <div className="flex flex-row md:flex-col justify-between items-end md:items-end w-full md:w-auto mt-4 md:mt-0">
-              <span className="text-sm font-medium bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full">
+            <div className="flex flex-row relative md:flex-col justify-between items-end md:items-end w-full md:w-auto mt-4 md:mt-0">
+              <span className="text-sm   font-medium top-2 bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full">
                 ⭐{product.rating.rate}
               </span>
               <span className="text-sm font-bold text-black mt-2 md:mt-6">
