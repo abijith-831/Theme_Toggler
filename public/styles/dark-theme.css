@@ -35,3 +35,14 @@ body.theme-dark {
   --button-active: #2563eb; 
   --button-text: #ffffff;
 }
+
+
+.list-div {
+  background: rgba(255, 255, 255, 0.10); /* semi-transparent white */
+  backdrop-filter: blur(50px);           /* glass blur */
+  -webkit-backdrop-filter: blur(10px);   /* Safari support */
+  border-radius: 1rem;                   /* rounded corners */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* subtle border */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* soft shadow */
+  padding: 1rem;                         /* optional spacing */
+}

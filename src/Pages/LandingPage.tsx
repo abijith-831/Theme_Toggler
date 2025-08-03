@@ -27,16 +27,16 @@ const LandingPage = () => {
         </VideoText>
       </div>
 
-      <div className="text-center mt-6 px-4 w-[50%] mx-auto">
-        <h2 className="text-4xl font-semibold">
+      <div className="text-center  px-4 w-[50%] mx-auto">
+        <h2 className="choose-theme text-4xl font-semibold">
           Choose a theme to experience a variety of visual styles!
         </h2>
-        <p className="mt-2 text-gray-600 dark:text-gray-400">
+        <p className="each-theme mt-12 text-gray-600 dark:text-gray-400">
           Each theme offers a unique design and mood — personalize your journey through the UI.
         </p>
       </div><br /><br />
 
-      <div className="text-center">
+      <div className=" featured text-center">
         <BlurInText text="Featured Products" />
       </div>
       {/* ============ the api results are showing in this component=========== */}

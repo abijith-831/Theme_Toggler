@@ -20,12 +20,12 @@ interface Product {
     return (
       <div className="flex flex-col gap-6 px-6 mt-12">
         {products.map((product) => (
-          <div key={product.id} className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 p-6 rounded-xl shadow-md bg-[var(--bg-card)] hover:transition-transform hover:scale-101 duration-300">
+          <div key={product.id} className="list-div flex flex-col md:flex-row justify-between items-start md:items-center gap-6 p-6 rounded-xl shadow-md bg-[var(--bg-card)] hover:transition-transform hover:scale-101 duration-300">
             {/* ===========Left side ========= */}
-            <div className="flex flex-col sm:flex-row rounded-xl gap-6 w-full">
+            <div className=" flex flex-col sm:flex-row rounded-xl gap-6 w-full">
               <img  src={product.image}  alt={product.title}  className="w-full rounded-md sm:w-32 sm:h-32 object-contain"/>
               <div className="flex-1">
-                <h2 className="font-bold text-lg md:text-xl">{product.title}</h2>
+                <h2 className="product-title font-bold text-lg md:text-xl">{product.title}</h2>
                 <p className="text-[var(--text-secondary)] text-sm md:text-base">
                   {product.description.slice(0, 150)}...
                 </p>
