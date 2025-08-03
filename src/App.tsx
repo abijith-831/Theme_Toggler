@@ -23,20 +23,33 @@ function App() {
 
     document.body.classList.remove('light-theme', 'dark-theme', 'blue-theme');
     document.body.classList.add(`${theme}-theme`);
-  }, [theme]); 
+  }, [theme]);
 
   return (
-    <Router>
-      <Navbar />
-      <div >
+    <div className="relative min-h-screen w-full overflow-hidden">
+      {/* Background Gradient */}
+      <div
+        className="absolute inset-0 -z-10 h-full w-full"
+        style={{
+          backgroundImage: `
+            radial-gradient(circle at 50% 100%, rgba(70, 85, 110, 0.5) 0%, transparent 60%),
+            radial-gradient(circle at 50% 100%, rgba(99, 102, 241, 0.4) 0%, transparent 70%),
+            radial-gradient(circle at 50% 100%, rgba(181, 184, 208, 0.3) 0%, transparent 80%)
+          `,
+        }}
+      />
+
+      <Router>
+        <Navbar />
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
-      </div>
-    </Router>
+      </Router>
+    </div>
   );
 }
+
 
 export default App;

@@ -1,12 +1,37 @@
 /* styles/dark-theme.css */
+
+
+.theme-light,
+.theme-dark,
+.theme-blue {
+  transition: background 2s ease 1s, color 2s ease 1s;
+}
+
+
+
 body.theme-dark {
-    background: linear-gradient(to right, #1e1e2f, #2c2c3c);
-    color: #f5f5f5;
-  }
+  background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(120, 180, 255, 0.25), transparent 70%), #000000;
+  color: #f5f5f5;
+}
+
+
+
   
   .navbar,
   button {
     background: linear-gradient(to right, #be1bb6, #444);
     color: #fff;
   }
+
   
+
+  @import "tailwindcss";
+
+.theme-dark {
+  --bg-card: #1f2937; /* Tailwind bg-gray-800 */
+  --text-primary: #f9fafb; /* Tailwind text-gray-100 */
+  --text-secondary: #9ca3af; /* Tailwind text-gray-400 */
+  --button-bg: #374151; /* Tailwind bg-gray-700 */
+  --button-active: #2563eb; /* Tailwind bg-blue-600 */
+  --button-text: #ffffff;
+}

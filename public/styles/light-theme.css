@@ -6,8 +6,13 @@
 }
    */
    /* styles/light-theme.css */
+.theme-light,
+.theme-dark,
+.theme-blue {
+  transition: background 2s ease 1s, color 2s ease 1s;
+}
 body.theme-light {
-  background: linear-gradient(to right, #f0f0f0, #ffffff);
+ 
   color: #222;
 }
 
@@ -27,4 +32,15 @@ body.theme-light .dropdown {
 
 body.theme-light .dropdown option {
   color: black;
+}
+
+@import "tailwindcss";
+
+.theme-light {
+  --bg-card: #f3f4f6; /* Tailwind bg-gray-200 */
+  --text-primary: #1f2937; /* Tailwind text-gray-800 */
+  --text-secondary: #4b5563; /* Tailwind text-gray-600 */
+  --button-bg: #e5e7eb; /* Tailwind bg-gray-200 */
+  --button-active: #3b82f6; /* Tailwind bg-blue-500 */
+  --button-text: #ffffff;
 }

@@ -1,7 +1,27 @@
 /* styles/blue-theme.css */
+.theme-light,
+.theme-dark,
+.theme-blue {
+  transition: background 2s ease 1s, color 2s ease 1s;
+}
+
+
+
 body.theme-blue {
-    background: linear-gradient(to right, #2193b0, #6dd5ed);
-    color: #ffffff;
+    /* background: linear-gradient(to right, #2193b0, #6dd5ed); */
+    /* background-image: radial-gradient(circle 500px at 50% 100px, rgba(139,92,246,0.4), transparent);
+    color: #ffffff; */
+    position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  background: #020617;
+  background-image:
+    linear-gradient(to right, rgba(71, 85, 105, 0.3) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(71, 85, 105, 0.3) 1px, transparent 1px),
+    radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
+  background-size: 32px 32px, 32px 32px, 100% 100%;
+  color: white;
   }
   
   .navbar,
@@ -10,3 +30,17 @@ body.theme-blue {
     color: #fff;
   }
   
+  body.theme-blue {
+    font-family: 'Pacifico';
+  }
+  
+  @import "tailwindcss";
+
+.theme-blue {
+  --bg-card: #e0f2fe; /* Tailwind bg-blue-100 */
+  --text-primary: #1e3a8a; /* Tailwind text-blue-900 */
+  --text-secondary: #3b82f6; /* Tailwind text-blue-500 */
+  --button-bg: #bae6fd; /* Tailwind bg-blue-200 */
+  --button-active: #1d4ed8; /* Tailwind bg-blue-700 */
+  --button-text: #ffffff;
+}
