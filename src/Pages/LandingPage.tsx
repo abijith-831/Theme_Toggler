@@ -1,7 +1,7 @@
 import { useTheme } from "../ThemeContext";
 import { VideoText } from "../Components/video-text";
 import BlurInText from "../Components/BlurInText";
-import ContentCard from "../Components/ContentCard";
+import ContentCard from "../Components/ContentCards/ContentCard";
 
 const themeVideoMap: Record<string, string> = {
   light: "https://cdn.pixabay.com/video/2023/03/09/153957-806571952_large.mp4",
