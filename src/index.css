@@ -8,3 +8,9 @@
 .theme-blue {
   transition: background 2s ease 1s, color 2s ease 1s;
 }
+
+
+html {
+  scroll-behavior: smooth;
+}
+

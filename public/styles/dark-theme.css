@@ -19,8 +19,8 @@ body.theme-dark {
   
   .navbar,
   button {
-    background: linear-gradient(to right, #be1bb6, #444);
-    color: #fff;
+    border: 1px solid white;
+    
   }
 
   
@@ -28,10 +28,10 @@ body.theme-dark {
   @import "tailwindcss";
 
 .theme-dark {
-  --bg-card: #1f2937; /* Tailwind bg-gray-800 */
-  --text-primary: #f9fafb; /* Tailwind text-gray-100 */
-  --text-secondary: #9ca3af; /* Tailwind text-gray-400 */
-  --button-bg: #374151; /* Tailwind bg-gray-700 */
-  --button-active: #2563eb; /* Tailwind bg-blue-600 */
+  --bg-card: #1f2937; 
+  --text-primary: #f9fafb;
+  --text-secondary: #9ca3af; 
+  --button-bg: #374151; 
+  --button-active: #2563eb; 
   --button-text: #ffffff;
 }
