@@ -18,7 +18,7 @@ interface Product {
     return (
       <div className="grid mt-12 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16">
         {products.map((product) => (
-          <div key={product.id} className="hover:transition-transform hover:scale-101 duration-300">
+          <div key={product.id} className="hover:transition-transform hover:scale-102 duration-300">
             <div className="p-8 relative rounded-4xl shadow-2xl bg-[var(--bg-card)] text-[var(--text-primary)] transition-all duration-700">
               <div className="absolute top-2 left-2 md:top-3 md:left-3 lg:top-4 lg:left-4 rounded-full bg-white  text-[var(--text-primary)] px-2 py-1 xl:px-6 md:py-3 shadow">
                 <h2 className="text-xs font-bold text-black">⭐{product.rating.rate}</h2>

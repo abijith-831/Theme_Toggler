@@ -18,8 +18,8 @@ interface Product {
     return (
       <div className="flex flex-col gap-6 mt-12">
         {products.map((product) => (
-          <div key={product.id} className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 p-6 rounded-xl shadow-md bg-[var(--bg-card)]">
-            {/* Left side: image and details */}
+          <div key={product.id} className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 p-6 rounded-xl shadow-md bg-[var(--bg-card)] hover:transition-transform hover:scale-102 duration-300">
+            {/* ===========Left side ========= */}
             <div className="flex flex-col sm:flex-row rounded-xl gap-6 w-full">
               <img  src={product.image}  alt={product.title}  className="w-full rounded-md sm:w-32 sm:h-32 object-contain"/>
               <div className="flex-1">
@@ -31,7 +31,7 @@ interface Product {
               </div>
             </div>
   
-            {/* Right side: rating and sold */}
+            {/* ==============Right side============= */}
             <div className="flex flex-row md:flex-col justify-between items-end md:items-end w-full md:w-auto mt-4 md:mt-0">
               <span className="text-sm font-medium bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full">
                 ⭐{product.rating.rate}
