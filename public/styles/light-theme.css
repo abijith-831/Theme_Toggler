@@ -12,7 +12,7 @@
   transition: background 2s ease 1s, color 2s ease 1s;
 }
 body.theme-light {
- 
+ background: #F4F1ED;
   color: #222;
 }
 
@@ -22,7 +22,7 @@ nav{
   color: white;
 }
 button {
-  background-color: black;
+  
   /* background: linear-gradient(to right, #ffffff, #f2f2f2); */
 }
 body.theme-light .dropdown {
@@ -38,7 +38,7 @@ body.theme-light .dropdown option {
 
 .theme-light {
   --bg-card: #f3f4f6; /* Tailwind bg-gray-200 */
-  --text-primary: #1f2937; /* Tailwind text-gray-800 */
+  --text-primary: #789ed4; /* Tailwind text-gray-800 */
   --text-secondary: #4b5563; /* Tailwind text-gray-600 */
   --button-bg: #e5e7eb; /* Tailwind bg-gray-200 */
   --button-active: #3b82f6; /* Tailwind bg-blue-500 */

@@ -80,31 +80,13 @@ const ContentCard = () => {
           </div>
 
           <div className="flex justify-center mt-6 space-x-2">
-            <button
-              onClick={goToPreviousPage}
-              disabled={currentPage === 1}
-              className="px-4 py-2 bg-gray-200 rounded disabled:opacity-50"
-            >
-              Prev
-            </button>
+            <button onClick={goToPreviousPage} disabled={currentPage === 1} className="px-4 py-2 bg-gray-200 rounded disabled:opacity-50 hover:transition-transform hover:scale-105 duration-300" >   Prev </button>
 
             {Array.from({ length: totalPages }, (_, i) => (
-              <button
-                key={i + 1}
-                onClick={() => handlePageClick(i + 1)}
-                className={`px-3 py-2 rounded ${currentPage === i + 1 ? 'bg-blue-500 text-white' : 'bg-gray-100'}`}
-              >
-                {i + 1}
-              </button>
+              <button key={i + 1}   onClick={() => handlePageClick(i + 1)}   className={`px-3 py-2 rounded ${currentPage === i + 1 ? 'bg-blue-500 font-bold scale-110 text-white' : 'bg-gray-100'}`} >  {i + 1}</button>
             ))}
 
-            <button
-              onClick={goToNextPage}
-              disabled={currentPage === totalPages}
-              className="px-4 py-2 bg-gray-200 rounded disabled:opacity-50"
-            >
-              Next
-            </button>
+            <button onClick={goToNextPage} disabled={currentPage === totalPages} className="px-4 py-2 bg-gray-200 rounded disabled:opacity-50 hover:transition-transform hover:scale-105 duration-300" >   Next </button>
           </div>
         </>
       )}
