@@ -32,7 +32,7 @@ const renderStars = (rating:any) => {
                 ? 'fill-yellow-400 text-yellow-400'
                 : i === fullStars && hasHalfStar
                 ? 'fill-yellow-400/50 text-yellow-400'
-                : 'text-gray-300'
+                : 'text-gray-500'
             }`}
           />
         ))}
