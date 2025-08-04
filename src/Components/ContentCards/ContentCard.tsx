@@ -112,7 +112,7 @@ const ContentCard = () => {
             <button onClick={goToPreviousPage} disabled={currentPage === 1} className="prev-button px-6  py-2 bg-gray-200 cursor-pointer text-black rounded-full disabled:opacity-50 hover:transition-transform hover:scale-105 duration-300" >   Prev </button>
 
             {Array.from({ length: totalPages }, (_, i) => (
-              <button key={i + 1}   onClick={() => handlePageClick(i + 1)}   className={`active-button border px-4 py-2 rounded-full ${currentPage === i + 1 ? ' active-button  cursor-pointer  font-bold hover:transition-transform scale-120 hover:scale-125 text-black border border-white' : ' font-bold  text-black hover:transition-transform hover:scale-110 cursor-pointer duration-300 other-button'}`} >  {i + 1}</button>
+              <button key={i + 1}   onClick={() => handlePageClick(i + 1)}   className={`active-button border border-white px-4 py-2 rounded-full ${currentPage === i + 1 ? ' active-button  cursor-pointer  font-bold hover:transition-transform scale-120 hover:scale-125 text-black border border-white' : ' font-bold  text-black hover:transition-transform hover:scale-110 cursor-pointer duration-300 other-button'}`} >  {i + 1}</button>
             ))}
 
             <button onClick={goToNextPage} disabled={currentPage === totalPages} className="prev-button px-6 py-2 bg-gray-200 text-black font-bold rounded-full disabled:opacity-50 hover:transition-transform cursor-pointer hover:scale-105 duration-300" >   Next </button>

@@ -54,3 +54,15 @@ body.theme-light .view-toggle-button.active {
   background-color: #000;
   color: #fff;
 }
+
+.prev-button{
+  background: white;
+ }
+ .active-button{
+   background: rgb(255, 255, 255);
+ }
+ 
+ .other-button{
+   background: #dbdada;
+ }
+ 
