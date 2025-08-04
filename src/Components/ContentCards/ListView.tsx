@@ -25,11 +25,17 @@ interface Product {
             <div className=" flex flex-col sm:flex-row rounded-xl gap-6 w-full">
               <img  src={product.image}  alt={product.title}  className="w-full rounded-md sm:w-32 sm:h-32 object-contain"/>
               <div className="flex-1">
-                <h2 className="product-title font-bold text-lg md:text-xl">{product.title}</h2>
-                <p className="text-[var(--text-secondary)] text-sm md:text-base">
-                  {product.description.slice(0, 150)}...
-                </p>
-                <p className="text-lg font-bold mt-2">${product.price}</p>
+                <h2 className="list-title-text product-title font-bold text-lg md:text-xl">{product.title}</h2>
+                <div className="list-decr-text relative group text-sm mb-2 text-[var(--text-secondary)] cursor-default">
+                  {product.description.slice(0, 100)}...
+                  
+                  {/* Tooltip for full description */}
+                  <div className="absolute z-20 w-72 p-3 text-xs text-white bg-black rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -top-2 left-1/2 -translate-x-1/2 translate-y-[-100%] whitespace-pre-line">
+                    {product.description}
+                  </div>
+                </div>
+
+                <p className=" list-descr-price text-lg font-bold mt-2">${product.price}</p>
                 <button className="bg-gradient-to-r mt-3 mx-2 from-gray-700 to-gray-900 text-white px-4 py-2 rounded-lg hover:from-gray-900 hover:to-gray-500 transition-all duration-300 flex items-center space-x-2 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 text-sm">
                   <ShoppingCart className="w-4 h-4" />
                   <span>Add to Cart</span>
@@ -43,7 +49,7 @@ interface Product {
                 ⭐{product.rating.rate}
               </span>
               <span className="text-sm font-bold text-black mt-2 md:mt-6">
-                <div className="flex">
+                <div className="flex list-review">
                     <span >
 
                 {product.rating.count} 

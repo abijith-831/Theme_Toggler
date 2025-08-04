@@ -71,9 +71,15 @@ const TableView:React.FC<TableViewProps> = ({products}) => {
                   <h3 className="font-semibold cursor-pointer text-gray-800 text-base md:text-lg hover:text-indigo-600 transition-colors duration-200">
                     {product.title}
                   </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">
-                    {product.description.slice(0, 80)}...
-                  </p>
+                  <div className=" table-descr-text relative group text-sm mb-2  cursor-default">
+                      {product.description.slice(0, 100)}...
+                      
+                      {/* Tooltip for full description */}
+                      <div className="absolute z-20 w-72 p-3 text-xs text-white bg-black rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -top-2 left-1/2 -translate-x-1/2 translate-y-[-100%] whitespace-pre-line">
+                        {product.description}
+                      </div>
+                    </div>
+
                 </div>
               </td>
               <td className="p-4 whitespace-nowrap">

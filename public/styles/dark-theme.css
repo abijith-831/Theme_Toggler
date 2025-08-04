@@ -47,3 +47,20 @@ body.theme-dark {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* soft shadow */
   padding: 1rem;                         /* optional spacing */
 }
+
+.table-descr-text{
+  color:black;
+}
+.prev-button{
+  background: #aaaaaa;
+ }
+ .active-button{
+   background: rgb(255, 255, 255);
+ }
+ 
+ .other-button{
+   background: #aaaaaa;
+ }
+ .list-review{
+  color:white;
+ }

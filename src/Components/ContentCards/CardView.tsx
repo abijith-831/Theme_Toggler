@@ -45,7 +45,14 @@ interface Product {
 
             <div className="pt-6">
               <h2 className="font-semibold text-lg">{product.title}</h2>
-              <p className="text-sm mb-2 text-[var(--text-secondary)]">{product.description.slice(0, 100)}...</p>
+              <div className="relative group text-sm mb-2 text-[var(--text-secondary)] cursor-default">
+                {product.description.slice(0, 100)}...
+                
+                <div className="absolute z-20 w-72 p-3 text-xs text-white bg-black rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -top-2 left-1/2 -translate-x-1/2 translate-y-[-100%] whitespace-pre-line">
+                  {product.description}
+                </div>
+              </div>
+
               <div className="flex justify-between">
                 <span className="font-extrabold text-xl ">${product.price}</span>
                 <span className="font-bold text-sm">{product.rating.count} reviews</span>

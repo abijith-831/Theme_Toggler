@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import '../../styles/ViewToggle.css'
 import ListView from './ListView'
 import CardView from './CardView'
@@ -16,6 +16,7 @@ interface Product {
     count: number;
   };
 }
+
 
 const ContentCard = () => {
   const [products, setProducts] = useState<Product[]>([]);
@@ -56,20 +57,36 @@ const ContentCard = () => {
   const currentProducts = products.slice(indexOfFirstProduct, indexOfLastProduct);
   const totalPages = Math.ceil(products.length / productsPerPage);
 
+  
+  const topRef = useRef<HTMLDivElement | null>(null); 
+
+  const scrollToTop = () => {
+    if (topRef.current) {
+      topRef.current.scrollIntoView({ behavior: 'smooth' }); 
+    }
+  };
+  
+
   const goToNextPage = () => {
     if (currentPage < totalPages) setCurrentPage((prev) => prev + 1);
+    scrollToTop();
   };
 
   const goToPreviousPage = () => {
     if (currentPage > 1) setCurrentPage((prev) => prev - 1);
+    scrollToTop();
   };
 
   const handlePageClick = (pageNumber: number) => {
     setCurrentPage(pageNumber);
+    scrollToTop();
+
   };
 
+
+
   return (
-    <div className='px-2 md:px-8 lg:px-16 py-14 justify-center items-center'>
+    <div ref={topRef} className=' px-2 md:px-8 lg:px-16 py-14 justify-center items-center'>
       <div className="view-toggle-wrapper mt-2 ">
         <div className="view-toggle-container">
           <button  className={`view-toggle-button font-bold ${viewType === 'card' ? 'active' : ''}`}  onClick={() => setViewType('card')}>  Card View</button>
@@ -91,14 +108,14 @@ const ContentCard = () => {
         {viewType === 'card' && <CardView products={currentProducts} />}
         {viewType === 'table' && <TableView products={currentProducts} />}
 
-          <div className="flex justify-center mt-6 space-x-2">
-            <button onClick={goToPreviousPage} disabled={currentPage === 1} className="px-6  py-2 bg-gray-200 text-black rounded-full disabled:opacity-50 hover:transition-transform hover:scale-105 duration-300" >   Prev </button>
+          <div className="flex justify-center mt-6 space-x-2 cursor-pointer">
+            <button onClick={goToPreviousPage} disabled={currentPage === 1} className="prev-button px-6  py-2 bg-gray-200 cursor-pointer text-black rounded-full disabled:opacity-50 hover:transition-transform hover:scale-105 duration-300" >   Prev </button>
 
             {Array.from({ length: totalPages }, (_, i) => (
-              <button key={i + 1}   onClick={() => handlePageClick(i + 1)}   className={`px-4 py-2 rounded-full ${currentPage === i + 1 ? 'bg-gray-600 font-bold hover:transition-transform scale-120 hover:scale-125 text-black border border-white' : 'bg-gray-100 font-bold  text-black hover:transition-transform hover:scale-110 duration-300'}`} >  {i + 1}</button>
+              <button key={i + 1}   onClick={() => handlePageClick(i + 1)}   className={`active-button border px-4 py-2 rounded-full ${currentPage === i + 1 ? ' active-button  cursor-pointer  font-bold hover:transition-transform scale-120 hover:scale-125 text-black border border-white' : ' font-bold  text-black hover:transition-transform hover:scale-110 cursor-pointer duration-300 other-button'}`} >  {i + 1}</button>
             ))}
 
-            <button onClick={goToNextPage} disabled={currentPage === totalPages} className="px-6 py-2 bg-gray-200 text-black font-bold rounded-full disabled:opacity-50 hover:transition-transform hover:scale-105 duration-300" >   Next </button>
+            <button onClick={goToNextPage} disabled={currentPage === totalPages} className="prev-button px-6 py-2 bg-gray-200 text-black font-bold rounded-full disabled:opacity-50 hover:transition-transform cursor-pointer hover:scale-105 duration-300" >   Next </button>
           </div>
         </>
       )}

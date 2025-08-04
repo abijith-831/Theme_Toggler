@@ -77,12 +77,34 @@ body.theme-blue .view-toggle-button.active {
 }
 
 .list-div {
-  background: rgba(255, 255, 255, 0.10); /* semi-transparent white */
-  backdrop-filter: blur(50px);           /* glass blur */
-  -webkit-backdrop-filter: blur(10px);   /* Safari support */
-  border-radius: 1rem;                   /* rounded corners */
-  border: 1px solid rgba(255, 255, 255, 0.2); /* subtle border */
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* soft shadow */
-  padding: 1rem;                         /* optional spacing */
+  background: rgb(214, 213, 213);
+  
+  backdrop-filter: blur(50px);          
+  -webkit-backdrop-filter: blur(50px);   
+  border-radius: 1rem;                   
+  border: 1px solid rgba(255, 255, 255, 0.2); 
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); 
+  padding: 1rem;                         
+}
+
+
+.table-descr-text{
+  color:rgb(49, 49, 49)
+}
+
+
+.prev-button{
+ background: white;
+}
+.active-button{
+  background: rgb(255, 255, 255);
+}
+
+.other-button{
+  background: #aaaaaa;
+}
+
+.list-review , .list-decr-text , .list-title-text , .list-descr-price{
+  color: rgb(0, 0, 0);
 }
 
